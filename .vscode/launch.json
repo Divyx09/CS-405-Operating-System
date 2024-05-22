@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "FCFS",
+            "request": "launch",
+            "mainClass": "FCFS",
+            "projectName": "CS-405 OS_a802fbde"
+        },
+        {
+            "type": "java",
+            "name": "SJF",
+            "request": "launch",
+            "mainClass": "SJF",
+            "projectName": "CS-405 OS_a802fbde"
+        },
+        {
+            "type": "java",
+            "name": "Run with AppMap",
+            "request": "launch",
+            "mainClass": "",
+            "vmArgs": "-javaagent:${userHome}\\.appmap\\lib\\java\\appmap.jar"
+        }
+    ]
+}

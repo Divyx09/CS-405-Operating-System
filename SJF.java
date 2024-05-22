@@ -49,6 +49,8 @@ public class SJF {
         }
         System.out.println("Total Waiting Time: " + totalWaitingTime);
         System.out.println("Total Turn Around Time: " + totalTurnAroundTime);
+        System.out.println("Average Waiting Time: " + (double)totalWaitingTime / n);
+        System.out.println("Average Turn Around Time: " + (double)totalTurnAroundTime / n);
     }
 }
 

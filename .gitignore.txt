@@ -1,0 +1,20 @@
+# Ignore all.class files
+*.class
+
+# Ignore the target directory
+target/
+
+# Ignore all.iml files
+*.iml
+
+# Ignore all.log files
+*.log
+
+# Ignore the node_modules directory
+node_modules/
+
+# Ignore the.idea directory (IntelliJ IDEA project files)
+.idea/
+
+# Ignore the.vscode directory (VS Code project files)
+.vscode/
