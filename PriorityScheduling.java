@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class FCFS {
+public class PriorityScheduling {
     public static void main(String[] args) {
         int n;
         Scanner in = new Scanner(System.in);
@@ -9,18 +9,23 @@ public class FCFS {
         Process[] p = new Process[n];
         for (int i = 0; i < n; i++) {
             p[i] = new Process();
-            System.out.println("Enter the arrival time and burst time for process " + (i + 1));
+            System.out.println("Enter the arrival time, burst time and priority for process " + (i + 1));
             p[i].arrivalTime = in.nextInt();
             p[i].burstTime = in.nextInt();
+            p[i].priority = in.nextInt();
         }
-        fcfs(p, n);
+        priorityScheduling(p, n);
     }
 
-    public static void fcfs(Process[] p, int n) {
-        int i, temp;
+    public static void priorityScheduling(Process[] p, int n) {
+        int i, j, temp;
         for (i = 0; i < n - 1; i++) {
-            for (int j = i + 1; j < n; j++) {
-                if (p[i].arrivalTime > p[j].arrivalTime) {
+            for (j = i + 1; j < n; j++) {
+                if (p[i].priority > p[j].priority) {
+                    temp = p[i].priority;
+                    p[i].priority = p[j].priority;
+                    p[j].priority = temp;
+
                     temp = p[i].arrivalTime;
                     p[i].arrivalTime = p[j].arrivalTime;
                     p[j].arrivalTime = temp;
@@ -31,9 +36,9 @@ public class FCFS {
                 }
             }
         }
-        System.out.println("Order of processes as per FCFS scheduling algorithm:");
+        System.out.println("Order of processes as per Priority scheduling algorithm:");
         for (i = 0; i < n; i++) {
-            System.out.println("Process " + (i + 1) + " Arrival Time: " + p[i].arrivalTime + " Burst Time: " + p[i].burstTime);
+            System.out.println("Process " + (i + 1) + " Arrival Time: " + p[i].arrivalTime + " Burst Time: " + p[i].burstTime + " Priority: " + p[i].priority);
         }
         int totalWaitingTime = 0, totalTurnAroundTime = 0;
         int completionTime = 0;
@@ -44,9 +49,11 @@ public class FCFS {
         }
         System.out.println("Total Waiting Time: " + totalWaitingTime);
         System.out.println("Total Turn Around Time: " + totalTurnAroundTime);
+        System.out.println("Average Waiting Time: " + (double)totalWaitingTime / n);
+        System.out.println("Average Turn Around Time: " + (double)totalTurnAroundTime / n);
     }
 }
 
 class Process {
-    int arrivalTime, burstTime;
+    int arrivalTime, burstTime, priority;
 }

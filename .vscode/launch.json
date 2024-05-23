@@ -2,6 +2,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CPUSchedulingComparison",
+            "request": "launch",
+            "mainClass": "CPUSchedulingComparison",
+            "projectName": "CS-405 OS_a802fbde"
+        },
+        {
+            "type": "java",
+            "name": "RoundRobin",
+            "request": "launch",
+            "mainClass": "RoundRobin",
+            "projectName": "CS-405 OS_a802fbde"
+        },
+        {
+            "type": "java",
+            "name": "PriorityScheduling",
+            "request": "launch",
+            "mainClass": "PriorityScheduling",
+            "projectName": "CS-405 OS_a802fbde"
+        },
+        {
+            "type": "java",
+            "name": "PriorityOrder",
+            "request": "launch",
+            "mainClass": "PriorityOrder",
+            "projectName": "CS-405 OS_a802fbde"
+        },
+        {
+            "type": "java",
             "name": "FCFS",
             "request": "launch",
             "mainClass": "FCFS",
