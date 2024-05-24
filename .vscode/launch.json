@@ -2,6 +2,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "RPCClient",
+            "request": "launch",
+            "mainClass": "RPCClient",
+            "projectName": "CS-405 OS_a802fbde"
+        },
+        {
+            "type": "java",
+            "name": "RPCServer",
+            "request": "launch",
+            "mainClass": "RPCServer",
+            "projectName": "CS-405 OS_a802fbde"
+        },
+        {
+            "type": "java",
+            "name": "BankersAlgorithm",
+            "request": "launch",
+            "mainClass": "BankersAlgorithm",
+            "projectName": "CS-405 OS_a802fbde"
+        },
+        {
+            "type": "java",
+            "name": "DiningPhilosophers",
+            "request": "launch",
+            "mainClass": "DiningPhilosophers",
+            "projectName": "CS-405 OS_a802fbde"
+        },
+        {
+            "type": "java",
+            "name": "ReaderWriterProblem",
+            "request": "launch",
+            "mainClass": "ReaderWriterProblem",
+            "projectName": "CS-405 OS_a802fbde"
+        },
+        {
+            "type": "java",
+            "name": "ProducerConsumerProblem",
+            "request": "launch",
+            "mainClass": "ProducerConsumerProblem",
+            "projectName": "CS-405 OS_a802fbde"
+        },
+        {
+            "type": "java",
             "name": "CPUSchedulingComparison",
             "request": "launch",
             "mainClass": "CPUSchedulingComparison",
